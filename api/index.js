@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
-const kanjiRoute = require('./api/kanji');
-const userRoute = require("./api/user");
+const kanjiRoute = require('./kanji');
+const userRoute = require("./user");
 const PORT = process.env.PORT || 8000;
 
 app.use(kanjiRoute);
 app.use(userRoute);
 
-app.get("/api", (req,res)=>{
+app.get("*", (req,res)=>{
     res.json({message:"Hello from /"});
 });
 
