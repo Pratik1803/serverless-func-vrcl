@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
-const kanjiRoute = require('./kanji');
-const userRoute = require("./user");
+const kanjiRoute = require('./api/kanji');
+const userRoute = require("./api/user");
 const PORT = process.env.PORT || 8000;
 
 app.use(kanjiRoute);
